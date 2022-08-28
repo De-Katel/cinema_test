@@ -30,6 +30,56 @@ function App() {
 
     }
 
+    const getActualFilm = () => {
+
+      let actualDateIndex = null;
+
+      film.forEach((element, index) => {
+        if (element.date == new Date(+new Date() - 604800000).toLocaleDateString('ru-RU')) {
+          actualDateIndex = index
+        }
+      });
+
+      const prevStorageDayFilmSession = film.slice(actualDateIndex);
+      const nextDayFilmSession = [];
+
+      let day = 604800000
+      const getNextDayFilmSession = () => {
+        for (let i = 0; i < 14 - prevStorageDayFilmSession.length; i++) {
+          nextDayFilmSession.push({
+            date: new Date(+new Date + day).toLocaleDateString('ru-RU'),
+            active: false,
+            session: {
+              '10:00': {
+                busy: 60,
+                free: 0
+              }, '12:00': {
+                busy: 60,
+                free: 0
+              }, '14:00': {
+                busy: 60,
+                free: 0
+              }, '16:00': {
+                busy: 60,
+                free: 0
+              }, '18:00': {
+                busy: 60,
+                free: 0
+              }, '20:00': {
+                busy: 60,
+                free: 0
+              }
+            }
+          })
+          day += 86400000;
+          console.log(day)
+        }
+      };
+
+      getNextDayFilmSession();
+      return [...prevStorageDayFilmSession, ...nextDayFilmSession]
+    }
+
     getActulDateArr();
 
 
@@ -45,7 +95,7 @@ function App() {
       dispatch(newFilmData(dateArr.map((item) => {
         return {
           date: item,
-          active: false,
+          active: item == new Date().toLocaleDateString('ru-RU') ? true : false,
           session: {
             '10:00': {
               busy: 60,
@@ -69,8 +119,9 @@ function App() {
           }
         }
       })))
-    } else {
-      console.log('Djnfr')
+    } else if (film[8] !== today) {
+
+      dispatch(newActiveDate(getActualFilm()))
     }
   }, []);
 

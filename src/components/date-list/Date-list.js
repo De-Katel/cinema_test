@@ -13,7 +13,7 @@ const DateList = () => {
 
     const dispatch = useDispatch();
 
-    const buttonDateList = film.slice(7).map((item) => {
+    const buttonDateList = film.map((item) => {
         return (
             <li key={item.date}>
                 <button
@@ -24,8 +24,7 @@ const DateList = () => {
                             active: i.date === item.date ? true : false,
                             session: i.session
                         }
-                    })
-                    )()
+                    }))()
                     )))}>
                     {item.date === new Date().toLocaleDateString('ru-RU') ? 'Сегодня' : item.date}
                 </button>

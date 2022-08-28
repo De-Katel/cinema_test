@@ -1,5 +1,5 @@
 .description {
-    width: 70%;
+    width: 90%;
     padding-left: 40px;
     font-size: 14px;
 }
@@ -29,6 +29,7 @@
     height: 30px;
     padding: 0 10px;
     margin-bottom: 5px;
+    width: 70px;
 }
 
 .date-button:hover {
