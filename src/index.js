@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { Provider } from 'react-redux';
-import { legacy_createStore as createStore} from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -23,7 +23,7 @@ const pReducer = persistReducer(persistConfig, reducer);
 
 const store = createStore(pReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-// const qwe =()=>storage.removeItem('persist:root');
+// const qwe = () => storage.removeItem('persist:root');
 // qwe()  //очистка sorage;
 
 export const persistor = persistStore(store)
@@ -31,9 +31,9 @@ export const persistor = persistStore(store)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-</Provider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
 );
 

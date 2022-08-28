@@ -1,5 +1,25 @@
 .session-list {
     font-size: 14px;
-   
+
 }
 
+.buy {
+    border: none;
+    background-color: #4a7b96;
+    color: white;
+    height: 30px;
+    width: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 7px;
+}
+
+.buy:hover {
+    background-color: #EE6F57;
+}
+
+.buy-ticket {
+    display: flex;
+}

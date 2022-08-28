@@ -49,27 +49,44 @@ function App() {
           nextDayFilmSession.push({
             date: new Date(+new Date + day).toLocaleDateString('ru-RU'),
             active: false,
-            session: {
-              '10:00': {
+            session: [
+              {
+                time: '10:00',
+                active: false,
                 busy: 60,
                 free: 0
-              }, '12:00': {
+              },
+              {
+                time: '12:00',
+                active: false,
                 busy: 60,
                 free: 0
-              }, '14:00': {
+              },
+              {
+                time: '14:00',
+                active: false,
                 busy: 60,
                 free: 0
-              }, '16:00': {
+              },
+              {
+                time: '16:00',
+                active: false,
                 busy: 60,
                 free: 0
-              }, '18:00': {
+              },
+              {
+                time: '18:00',
+                active: false,
                 busy: 60,
                 free: 0
-              }, '20:00': {
+              },
+              {
+                time: '20:00',
+                active: false,
                 busy: 60,
                 free: 0
-              }
-            }
+              },
+            ]
           })
           day += 86400000;
           console.log(day)
@@ -99,32 +116,38 @@ function App() {
           session: [
             {
               time: '10:00',
+              active: false,
               busy: 60,
               free: 0
             },
             {
               time: '12:00',
-              busy: 60,
+              active: false,
+              busy: 59,
               free: 0
             },
             {
               time: '14:00',
-              busy: 60,
+              active: false,
+              busy: 58,
               free: 0
             },
             {
               time: '16:00',
-              busy: 60,
+              active: false,
+              busy: 57,
               free: 0
             },
             {
               time: '18:00',
-              busy: 60,
+              active: false,
+              busy: 56,
               free: 0
             },
             {
               time: '20:00',
-              busy: 60,
+              active: false,
+              busy: 55,
               free: 0
             },
           ]
