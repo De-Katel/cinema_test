@@ -33,7 +33,7 @@ const DateList = () => {
     })
 
     return (
-        <div className="description">
+        <div>
             <h2>В бой идут одни старики</h2>
             <p>выберите дату</p>
             <ul className='date-list'>

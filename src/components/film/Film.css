@@ -13,3 +13,10 @@
     height: 150px;
 }
 
+@media screen and (max-width: 768px) {
+    .film {
+        
+        width: 80%;
+        
+    }  
+}

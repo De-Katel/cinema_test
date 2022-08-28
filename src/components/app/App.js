@@ -96,27 +96,38 @@ function App() {
         return {
           date: item,
           active: item == new Date().toLocaleDateString('ru-RU') ? true : false,
-          session: {
-            '10:00': {
+          session: [
+            {
+              time: '10:00',
               busy: 60,
               free: 0
-            }, '12:00': {
+            },
+            {
+              time: '12:00',
               busy: 60,
               free: 0
-            }, '14:00': {
+            },
+            {
+              time: '14:00',
               busy: 60,
               free: 0
-            }, '16:00': {
+            },
+            {
+              time: '16:00',
               busy: 60,
               free: 0
-            }, '18:00': {
+            },
+            {
+              time: '18:00',
               busy: 60,
               free: 0
-            }, '20:00': {
+            },
+            {
+              time: '20:00',
               busy: 60,
               free: 0
-            }
-          }
+            },
+          ]
         }
       })))
     } else if (film[8] !== today) {

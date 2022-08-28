@@ -1,3 +1,4 @@
+import session from "redux-persist/lib/storage/session";
 import { ACTIONS } from "./actions";
 
 const initialState = {
