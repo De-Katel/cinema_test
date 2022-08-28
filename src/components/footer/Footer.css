@@ -1,0 +1,14 @@
+footer {
+    font-size: 18px;
+    color: white;
+    height: 55px;
+    background-color: #00334E;
+    padding: 0 20PX;
+}
+
+.footer-wrap {
+    padding-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,23 @@
+main {
+    height: calc(100% - 110px);
+    box-sizing: border-box;
+    background-color: #145374;
+    padding-top: 50px;
+    overflow-y: auto;
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+main::-webkit-scrollbar {
+    background-color: #2d4a5a;
+    width: 7px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #646464;
+}

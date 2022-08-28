@@ -1,0 +1,40 @@
+.description {
+    width: 70%;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.description>h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #4a7b96;
+
+}
+
+.date-list {
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 73px);
+    grid-template-rows: auto;
+}
+
+.date-button {
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #2d4a5a;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+
+.date-button:hover {
+    background-color: #EE6F57;
+}
+
+.activ {
+    background-color: #EE6F57;
+}
